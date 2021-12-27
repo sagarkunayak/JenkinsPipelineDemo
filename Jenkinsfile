@@ -10,7 +10,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building'
-                throw new Exception("Something went wrong!")
+                currentBuild.result = 'ABORTED'
+                error('Quitting')
             }
         }
         stage('Deploy') {
