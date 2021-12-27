@@ -10,8 +10,6 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building'
-                currentBuild.result = 'ABORTED'
-                error('Quitting')
             }
         }
         stage('Deploy') {
