@@ -10,7 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building'
-                throw Exception()
+                throw new Exception("Something went wrong!")
             }
         }
         stage('Deploy') {
