@@ -10,6 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building'
+                throw Exception()
             }
         }
         stage('Deploy') {
